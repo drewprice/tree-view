@@ -266,6 +266,8 @@ class TreeView extends View
         atom.notifications.addWarning("Error parsing ignore pattern (#{ignoredName})", detail: error.message)
 
   updateRoots: (expansionStates={}) ->
+    window.roots = @roots
+
     oldExpansionStates = {}
     for root in @roots
       oldExpansionStates[root.directory.path] = root.directory.serializeExpansionState()

@@ -7,6 +7,7 @@ module.exports =
   treeView: null
 
   activate: (@state) ->
+    window.state = @state
     @disposables = new CompositeDisposable
     @state.attached ?= true if @shouldAttach()
 
