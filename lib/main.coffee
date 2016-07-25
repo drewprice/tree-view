@@ -8,6 +8,8 @@ module.exports =
 
   activate: (@state) ->
     window.state = @state
+    console.log 'IT WOOOOOOORKED!!!!'
+    console.log @state
     @disposables = new CompositeDisposable
     @state.attached ?= true if @shouldAttach()
 
